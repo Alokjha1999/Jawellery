@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Selection Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Jewellery Selection Form</h2>
+    <form id="jewelleryForm" enctype="multipart/form-data">
+        <!-- Occasion -->
+        <div class="form-group">
+            <label for="occasion">Occasion:</label>
+            <select id="occasion" name="occasion" required>
+                <option value="">Select an occasion</option>
+                <option value="engagement">Engagement</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="birthday">Birthday</option>
+                <option value="daily-wear">Daily Wear</option>
+            </select>
+        </div>
+
+        <!-- Gift or Personal Purchase -->
+        <div class="form-group">
+            <label>Gift or personal purchase:</label><br>
+            <input type="radio" id="gift" name="purchase" value="gift" required>
+            <label for="gift">Gift</label>
+            <input type="radio" id="personal" name="purchase" value="personal" required>
+            <label for="personal">Personal Purchase</label>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label>Gender:</label><br>
+            <label for="male" class="gender-icon">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmvSoqEMvs4E-TIgyfMdztZYEdKav-zok1A&s" alt="Male" width="50" height="50">
+            </label>
+            <label for="female" class="gender-icon">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNA2VJSkZ_N_QZ-rc4ig1BLqQX3c0aFkWEDuXXc1InmAoe8mN-VPZXniZyeJe1K__o0A&usqp=CAU" alt="Female" width="50" height="50">
+            </label>
+        </div>
+
+        <!-- Age Group -->
+        <div class="form-group">
+            <label>Age Group:</label><br>
+            <input type="radio" id="ageUnder30" name="age" value="under30" required>
+            <label for="ageUnder30">Under 30</label>
+            <input type="radio" id="age30to50" name="age" value="30to50" required>
+            <label for="age30to50">30 - 50</label>
+            <input type="radio" id="ageOver50" name="age" value="over50" required>
+            <label for="ageOver50">Over 50</label>
+        </div>
+
+        <!-- Religion (Optional) -->
+        <div class="form-group">
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion">
+        </div>
+
+        <!-- Type of Jewelry -->
+        <div class="form-group">
+            <label for="jewelryType">Type of Jewellery:</label><br>
+            <input type="radio" id="rings" name="jewelryType" value="rings" required>
+            <label for="rings">Rings</label>
+            <input type="radio" id="necklaces" name="jewelryType" value="necklaces" required>
+            <label for="necklaces">Necklaces</label>
+            <input type="radio" id="pendants" name="jewelryType" value="pendants" required>
+            <label for="pendants">Pendants</label>
+            <!-- Add more jewelry types as needed -->
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group">
+            <label for="budget">Budget:</label><br>
+            <select id="budget" name="budget" required>
+                <option value="">Select a budget range</option>
+                <option value="under100">$0 - $100</option>
+                <option value="100to500">$100 - $500</option>
+                <option value="500to1000">$500 - $1000</option>
+                <option value="over1000">Over $1000</option>
+            </select>
+        </div>
+
+        <!-- Outfit Image Upload (Optional) -->
+        <div class="form-group">
+            <label for="outfitImage">Upload outfit image:</label>
+            <input type="file" id="outfitImage" name="outfitImage" accept="image/*">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
